@@ -1,0 +1,35 @@
+﻿@if (@ViewBag.records != null)
+{
+    <table class="table">
+        <tr>
+            <th>
+                OrderID
+            </th>
+            <th>
+                orderDate
+            </th>
+            <th>
+                OrderStatus
+            </th>
+            
+
+        </tr>
+        @foreach (var item in @ViewBag.records)
+        {
+
+            <tr>
+                <td>
+                    <input type="text" id="OrderID" name="OrderID" value="@item.OrderID" class="form-control" />
+                </td>
+                <td>
+                    <input type="text" id="orderDate" name="orderDate" value="@item.orderDate" class="form-control" />
+                </td>
+                <td>
+                    <input type="text" id="OrderStatus" name="OrderStatus" value="@item.OrderStatus" class="form-control" />
+                </td>
+                
+            </tr>
+        }
+    </table>
+}
+
